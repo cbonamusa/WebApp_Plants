@@ -3,9 +3,16 @@
     <div>
       <h1>Gardening for good</h1>
     </div>
-
-    <cards></cards>
-    <cards></cards>
+    <v-container fluid class="pa-0">
+      <v-layout row wrap>
+        <cards></cards>
+        <cards></cards>
+        <cards></cards>
+        <cards></cards>
+        <cards></cards>
+        <cards></cards>
+      </v-layout>
+    </v-container>
   </v-container>
 </template>
 
