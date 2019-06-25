@@ -16,7 +16,7 @@
     <!-- NAVBAR -->
     <v-toolbar app dense fixed flat color="rgb(230 ,255, 229)">
       <v-btn icon>
-        <v-icon>arrow_back</v-icon>
+        <v-icon @click="$router.go(-1)">arrow_back</v-icon>
       </v-btn>
 
       <v-btn icon>
