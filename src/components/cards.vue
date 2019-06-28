@@ -1,49 +1,55 @@
 <template>
-  <v-flex class="pb-2 px-1" xs6 sm4>
-    <v-card v-for="plant in myplants" :key="plant.category">
-      <v-img height="90px" :src="plant.image" width="100%"></v-img>
-      <v-card-title primary-title>
-        <div>
-          <div class="pt-0 mt-0 headline font-weight-black">{{plant.name}}</div>
-          <div class="caption font-italic">Aloe vera</div>
-          <span class="info--text font-weight-light">Cares your burn</span>
-        </div>
-      </v-card-title>
-      <v-card-actions>
-        <!-- <v-btn flat icon color="info">
-            <v-icon>nature</v-icon>
-        </v-btn>  SEGUN LA PLANTA SERA ESTE O EL DE ABAJO-->
-        <v-btn flat icon small color="info" v-show="plant.category == 'Shrubs'">
-          <v-icon>local_florist</v-icon>
-        </v-btn>
-        <v-btn flat icon small color="info" v-show="plant.category == 'Container Plants'">
-          <v-icon>nature</v-icon>
-        </v-btn>
+  <v-flex>
+    <v-text-field v-model="search" append-icon="search" label="Search" single-line></v-text-field>
+    <v-layout row wrap>
+      <v-flex class="mb-2" v-for="(plant, i) in searched" :key="i" xs12 sm4>
+        <!-- in searched, esta es la funcion de filtros -->
+        <v-card>
+          <v-img height="90px" :src="plant.image" width="100%"></v-img>
+          <v-card-title class="pl-3 pt-2 pb-1" primary-title>
+            <div>
+              <div class="titulo pt-0 mt-0 headline font-weight-black">{{plant.name}}</div>
+              <div class="cientifico caption font-italic">{{plant.scientific}}</div>
+              <span class="info--text font-weight-light">Cares your burn</span>
+            </div>
+          </v-card-title>
 
-        <v-btn flat icon small color="info" v-show="plant.category == 'Herbaceous Perennials'">
-          <v-icon>leave</v-icon>
-        </v-btn>
+          <v-card-actions class="pt-0 mt-0">
+            <v-btn flat icon small color="info" v-show="plant.category == 'Shrubs'">
+              <v-icon>local_florist</v-icon>
+            </v-btn>
 
-        <v-btn flat icon small color="info" v-show="plant.category == 'Cacti & Succulents'">
-          <v-icon>cactus</v-icon>
-        </v-btn>
+            <v-btn flat icon small color="info" v-show="plant.category == 'Container Plants'">
+              <v-icon>nature</v-icon>
+            </v-btn>
 
-        <v-btn flat icon color="error">
-          <v-icon>room</v-icon>
-        </v-btn>
-        <v-btn flat icon color="primary">
-          <v-icon>favorite</v-icon>
-        </v-btn>
-        <v-spacer></v-spacer>
+            <v-btn flat icon small color="info" v-show="plant.category == 'Herbaceous Perennials'">
+              <v-icon>leave</v-icon>
+            </v-btn>
 
-        <v-btn icon @click="show = !show">
-          <v-icon>{{show ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}}</v-icon>
-        </v-btn>
-      </v-card-actions>
-      <v-slide-y-transition>
-        <v-card-text v-show="show">{{plant.instructions}}</v-card-text>
-      </v-slide-y-transition>
-    </v-card>
+            <v-btn flat icon small color="info" v-show="plant.category == 'Cacti & Succulents'">
+              <v-icon>cactus</v-icon>
+            </v-btn>
+
+            <v-btn flat icon color="error">
+              <v-icon>room</v-icon>
+            </v-btn>
+            <v-btn flat icon color="primary">
+              <v-icon>favorite</v-icon>
+            </v-btn>
+
+            <v-spacer></v-spacer>
+
+            <v-btn icon @click="show = !show">
+              <v-icon>{{show ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}}</v-icon>
+            </v-btn>
+          </v-card-actions>
+          <v-slide-y-transition>
+            <v-card-text v-show="show">{{plant.instructions}}</v-card-text>
+          </v-slide-y-transition>
+        </v-card>
+      </v-flex>
+    </v-layout>
   </v-flex>
 </template>
 
@@ -54,13 +60,24 @@ export default {
   data() {
     return {
       show: false,
-      myplants: []
+      myplants: [],
+      search: ""
     };
+  },
+
+  computed: {
+    searched() {
+      return this.myplants.filter(
+        plant =>
+          plant.name.toLowerCase().includes(this.search.toLowerCase()) ||
+          plant.category.toLowerCase().includes(this.search.toLowerCase())
+      ); // si quito el .name no me muetra ninguna card
+    }
   },
 
   mounted() {
     axios
-      .get("https://api.myjson.com/bins/96svt")
+      .get("https://api.myjson.com/bins/12guyf")
       .then(response => (this.myplants = response.data));
   }
 
@@ -85,4 +102,9 @@ export default {
 
 
 <style>
+.titulo {
+  line-height: 25px !important;
+  font-size: 19px !important;
+  padding-left: 0px !important;
+}
 </style>

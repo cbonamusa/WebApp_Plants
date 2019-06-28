@@ -3,173 +3,319 @@
         "category": "Shrubs",
         "price": 15.99,
         "instructions": "Large double. Good grower, heavy bloomer. Early to mid-season, acid loving plants. Plant in moist well drained soil with pH of 4.0-5.5.",
-        "photo": "california_snow.jpg",
+        "scientific": "Rhododendron",
         "name": "Azalea",
         "productId": 1,
-        "image": "https://images.homedepot-static.com/productImages/80198476-3136-423d-a608-b71602afb64c/svn/encore-azalea-shrubs-80691-64_1000.jpg"
+        "image": "https://images.homedepot-static.com/productImages/80198476-3136-423d-a608-b71602afb64c/svn/encore-azalea-shrubs-80691-64_1000.jpg",
+        "type": [
+            "outdoor"
+        ]
     },
     {
         "category": "Shrubs",
         "price": 33.99,
         "instructions": "Beautiful large royal purple flowers adorn attractive satiny green leaves that turn orange\\/red in cold weather. Grows to up to 18 feet, or prune annually to shorten.",
-        "photo": "princess_flower.jpg",
-        "name": "Tibouchina Semidecandra",
+        "name": "Princess flower",
+        "scientific": "Tibouchina Semidecandra",
         "productId": 2,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Tibouchina_semidecandra_%282%29.jpg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Tibouchina_semidecandra_%282%29.jpg",
+        "type": [
+            "outdoor"
+        ]
+    },
+    {
+        "category": "Cacti & Succulents",
+        "price": 30.99,
+        "instructions": "Drought tolerant, well drained soil. Prefers full sun.",
+        "scientific": "Aloe vera",
+        "name": "Aloe Vera",
+        "productId": 28,
+        "image": "https://ecocosas.com/wp-content/uploads/2018/12/cultivar-aloe-vera.jpg",
+        "type": [
+            "outdoor",
+            "indoor",
+            "food",
+            "medical"
+        ]
     },
     {
         "category": "Shrubs",
         "price": 12.99,
         "instructions": "Blooms in summer, 20-35 inches high. Fertilize regularly for best results. Full sun, drought tolerant.",
-        "photo": "haight_ashbury.jpg",
-        "name": "Hibiscus",
+        "name": "Haight ashbury",
+        "scientific": "Hibiscus",
         "productId": 3,
-        "image": "https://animals.sandiegozoo.org/sites/default/files/2016-11/Hibiscus.jpg"
+        "image": "https://animals.sandiegozoo.org/sites/default/files/2016-11/Hibiscus.jpg",
+        "type": [
+            "outdoor"
+        ]
     },
     {
         "category": "Shrubs",
         "price": 5.99,
         "instructions": "Quick-growing, herbaceous, shrub reaching up to 30 inches in height, forming a rounded, dense bush.",
-        "photo": "mona_lavender.jpg",
-        "name": "Plectranthus",
+        "name": "Mona lavender",
+        "scientific": "Plectranthus",
         "productId": 4,
-        "image": "https://http2.mlstatic.com/plectranthus-neochilus-boldo-paraguayo-D_NQ_NP_852742-MLA29716078520_032019-F.jpg"
+        "image": "https://http2.mlstatic.com/plectranthus-neochilus-boldo-paraguayo-D_NQ_NP_852742-MLA29716078520_032019-F.jpg",
+        "type": [
+            "outdoor",
+            "indoor",
+            "medical"
+        ]
     },
     {
         "category": "Shrubs",
         "price": 15.99,
         "instructions": "Slow growing, upright to spreading shrub. Oval, glossy, leaves and profuse winter to spring blooming flowers.",
-        "photo": "camellia.jpg",
-        "name": "Camellia Japonica",
+        "name": "Camellia",
+        "scientific": "Camellia japonica",
         "productId": 5,
-        "image": "https://horomidis.gr/wp-content/uploads/2013/08/Camellia_japonica-IMG_2051.jpg"
+        "origen": "China and Japan",
+        "image": "https://horomidis.gr/wp-content/uploads/2013/08/Camellia_japonica-IMG_2051.jpg",
+        "type": [
+            "outdoor"
+        ]
+    },
+    {
+        "category": "Herbaceous Perennials",
+        "price": 2.99,
+        "instructions": "Thymus are evergreen woody-based perennials, shrub or sub-shrubs with small aromatic leaves and terminal whorls of small, 2-lipped, tubular, purple, pink or white flowers in late spring or summer",
+        "name": "Thymus",
+        "scientific": "thymus timmeare",
+        "productId": 5,
+        "origen": "",
+        "image": "https://cdn10.bigcommerce.com/s-2drwt2az/products/15811/images/61500/chfrenchthyme1__82482.1515139556.1280.1280.jpg?c=2",
+        "type": [
+            "outdoor",
+            "medical",
+            "food"
+        ]
     },
     {
         "category": "Shrubs",
         "price": 10.99,
         "instructions": "Thorny woody vine scrambles over other plants with their hooked thorns. Pest free.",
-        "photo": "bougainvillea.jpg",
-        "name": "Bougainvillea Spectabilis",
+        "name": "Bougainvillea",
+        "scientific": "Bougainvillea Spectabilis",
         "productId": 6,
-        "image": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/bougainvillea-spectabilis-monique-la-chapelle.jpg"
+        "image": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/bougainvillea-spectabilis-monique-la-chapelle.jpg",
+        "type": [
+            "outdoor"
+        ]
     },
     {
         "category": "Shrubs",
         "price": 22.99,
         "instructions": "Deep purple colored flowers bushy rounded growth habit to 3 feet tall. Plant in full sun. Water regularly.",
-        "photo": "rosa_burgundy.jpg",
-        "name": "Rosa Burgundy",
-        "productId": 7
+        "name": "Rosa Burgundy.jpg",
+        "scientific": "Rosa burgundy",
+        "productId": 7,
+        "image": "https://e54055a024bc6fb58d47-f7df714a3b816a175961a96ef2278d84.ssl.cf2.rackcdn.com/10728-Burgundy-Iceberg-Floribunda-Rose.jpg",
+        "type": [
+            "outdoor"
+        ]
+    },
+    {
+        "category": "Herbaceous Perennials",
+        "price": 2.99,
+        "instructions": "Thymus are evergreen woody-based perennials, shrub or sub-shrubs with small aromatic leaves and terminal whorls of small, 2-lipped, tubular, purple, pink or white flowers in late spring or summer",
+        "name": "Oregano",
+        "scientific": "Organum vulgare",
+        "productId": 5,
+        "origen": "",
+        "image": "http://www.plantasmallorca.com/site/25-large_default/oregano-origanum-vulgare.jpg",
+        "type": [
+            "outdoor",
+            "indoor",
+            "medical",
+            "food"
+        ]
     },
     {
         "category": "Shrubs",
         "price": 22.99,
         "instructions": "Deep purple colored flowers bushy rounded growth habit to 3 feet tall. Plant in full sun. Water regularly.",
-        "photo": "rosa_iceberg.jpg",
         "name": "Rosa Iceberg",
-        "productId": 8
+        "scientific": "Rosa iceberg",
+        "productId": 8,
+        "image": "https://http2.mlstatic.com/rosa-iceberg-blanca-trepadora-D_NQ_NP_278011-MLA20453024233_102015-F.jpg",
+        "type": [
+            "outdoor"
+        ]
     },
     {
         "category": "Container Plants",
         "price": 45.99,
         "instructions": "They do not thrive indoors, where the light is too dim, and humidity too low, for them to grow properly.",
-        "photo": "bonsai.jpg",
-        "name": "Bonsai Tree",
-        "productId": 9
+        "name": "Bonsai",
+        "scientific": "Bonsai tree",
+        "productId": 9,
+        "image": "https://s7img.ftdi.com/is/image/ProvideCommerce/P1483_LOL?$ftd-hero-lv-new$",
+        "type": [
+            "outdoor",
+            "indoor"
+        ]
     },
     {
         "category": "Container Plants",
         "price": 12.99,
         "instructions": "Blooms continuously from early spring to first frost. Full sun or part shade, moist well-drained soil.",
-        "photo": "calibrachoa.jpg",
-        "name": "Calibrachoa Noa",
-        "productId": 10
+        "name": "Calibrachoa",
+        "scientific": "Calibrachoa noa",
+        "productId": 10,
+        "image": "https://static.onecms.io/wp-content/uploads/sites/37/2016/02/31234753/superbells2520cherry2520star.jpg.rendition.largest.jpg",
+        "type": [
+            "outdoor",
+            "indoor"
+        ]
     },
     {
         "category": "Container Plants",
         "price": 14.99,
         "instructions": "The flowers last about ten weeks. They have a waxy texture and reach a height of more than 20 inches.",
-        "photo": "cymbidium.jpg",
-        "name": "Cymbidium Aestivum",
-        "productId": 11
+        "name": "Cymbidium",
+        "scientific": "Cymbidium aestivum",
+        "productId": 11,
+        "image": "https://img.crocdn.co.uk/images/products2/pl/20/00/02/88/pl2000028813.jpg?width=940&height=940",
+        "type": [
+            "outdoor",
+            "indoor"
+        ]
     },
     {
         "category": "Container Plants",
         "price": 4.99,
         "instructions": "Creamy-white centers, medium green outer foliage with flattened outer foliage.",
-        "photo": "flowering_kale.jpg",
-        "name": "Brassica Oleracea",
-        "productId": 12
+        "name": "Flowering kale",
+        "scientific": "Brassica oleracea",
+        "productId": 12,
+        "image": "https://cdn.shopify.com/s/files/1/1420/8798/products/broccoli-romanesco-brassica-oleracea-italica-seeds-amkha-seed_104.jpg?v=1535009342",
+        "type": [
+            "food",
+            "outdoor"
+        ]
     },
     {
         "category": "Container Plants",
         "price": 4.99,
         "instructions": "Compact mounds of colorful dainty flowers, good for window boxes. Fertile well drained soil.",
-        "photo": "penny_orange_jumpup.jpg",
+        "photo": "Penny orange jumpup",
         "name": "Viola Penny Orange Jump Up",
-        "productId": 13
+        "productId": 13,
+        "image": "https://www.thespruce.com/thmb/UKpzVtlziaOBQmBeHKY-xLsZkGU=/3450x2587/filters:no_upscale():max_bytes(150000):strip_icc()/jollyjokerpansy-5894ded25f9b5874ee21f309.jpg",
+        "type": [
+            "outdoor"
+        ]
     },
     {
         "category": "Container Plants",
         "price": 5.99,
         "instructions": "Cotula have very fragrant orange flowers that bloom in the middle of summer.",
-        "photo": "pincushion.jpg",
-        "name": "Cotula",
-        "productId": 14
+        "name": "pincushion",
+        "scientific": "Cotula",
+        "productId": 14,
+        "image": "https://cdn.shopify.com/s/files/1/1479/1514/products/Cotula_coronopifolia_Marginal_1024x1024.JPG?v=1478780621",
+        "type": [
+            "outdoor",
+            "indoor"
+        ]
+    },
+    {
+        "category": "Cacti & Succulents",
+        "price": 18.99,
+        "instructions": "Add water until there is half inch of dry soil on the surface. Do not water again until the soil is completely dry.",
+        "scientific": "red cactus",
+        "name": "Red Cactus",
+        "productId": 27,
+        "image": "https://cdn.pixabay.com/photo/2017/05/06/11/00/cactus-2289519__340.jpg",
+        "type": [
+            "outdoor",
+            "indoor"
+        ]
     },
     {
         "category": "Container Plants",
         "price": 4.99,
         "instructions": "Well drained neutral to slightly acid soil, bright light. Do not over-fertilize or these flowers will lose scent.",
-        "photo": "pelargonium.jpg",
+        "photo": "pelargonium",
         "name": "Pelargonium Peltatum",
-        "productId": 15
+        "productId": 15,
+        "image": "https://www.woottensplants.com/wp-content/uploads/2018/10/Phyllis.jpg",
+        "type": [
+            "outdoor"
+        ]
     },
     {
         "category": "Container Plants",
         "price": 3.99,
         "instructions": "Compact mounds of colorful dainty flowers, good for window boxes. Fertile well drained soil.",
-        "photo": "pansy_blue_shades.jpg",
-        "name": "Pansy Blue Shades",
-        "productId": 16
+        "name": "Pansy blue shades",
+        "scientific": "Viola wittrockiana",
+        "productId": 16,
+        "image": "https://cdn.shopify.com/s/files/1/2048/8041/products/Pansy_Dynamite_Lavender-5518_1024x1024.jpg?v=1544584007",
+        "type": [
+            "outdoor"
+        ]
     },
     {
         "category": "Container Plants",
         "price": 3.99,
         "instructions": "Compact mounds of colorful dainty flowers, good for window boxes. Fertile well drained soil.",
-        "photo": "yellow_pansy.jpg",
-        "name": "Pansy Yellow with Blotch",
-        "productId": 17
+        "name": "Yellow pansy",
+        "scientifc": "Viola pedunculata",
+        "productId": 17,
+        "image": "https://2.bp.blogspot.com/-BDYXfVQRWaY/VsJ2-X_N1KI/AAAAAAAAZJY/zA2N8n_IYhI/s640/Viola%2Bpedunculata_TransPreserve-SRP_2005-04.17.jpg",
+        "type": [
+            "outdoor"
+        ]
     },
     {
         "category": "Container Plants",
         "price": 25.99,
         "instructions": "Choose the brightest windows in your house for your orchids, place on an humidity tray and spray regularly.",
-        "photo": "phalaenopsis.jpg",
-        "name": "Phalaenopsis Purple",
-        "productId": 18
+        "name": "Phalaenopsis",
+        "scientific": "Phalaenopsis Purple",
+        "productId": 18,
+        "image": "https://smartgardenguide.com/wp-content/uploads/2018/08/phalaenopsis-orchid-white-close-up-864x576.jpg",
+        "type": [
+            "indoor"
+        ]
     },
     {
         "category": "Herbaceous Perennials",
         "price": 5.99,
         "instructions": "They thrive in fertile, fast draining, slightly alkaline (pH 6.75) soil. Avoid overwatering.",
-        "photo": "dianthus.jpg",
-        "name": "Dianthus",
-        "productId": 19
+        "scientific": "Dianthus",
+        "name": "Diana",
+        "nicknames": "Dianthus 'Pink Kisses', Pink, Carnation, Sweet William",
+        "Toxicity": "Toxic to pets",
+        "productId": 19,
+        "image": "https://res.cloudinary.com/patch-gardens/image/upload/c_fill,f_auto,h_840,q_auto:good,w_840/v1554986889/products/dianthus-pink-kisses-378855.jpg",
+        "type": [
+            "outdoor"
+        ],
+        "care": "Needs well-drained, alkaline or neutral soil to thrive. She'll be happiest if she gets around 4-5 hours of sunlight a day, so make sure she's in a well-lit spot. No need to mulch Diana - she needs good air circulation to her soil."
     },
     {
         "category": "Herbaceous Perennials",
         "price": 9.99,
         "instructions": "Chrysanthemums respond to plenty of food and moisture, and prefer full sun.",
-        "photo": "bronze_mums.jpg",
+        "photo": "Bronze mums",
         "name": "Chrysanthemum",
-        "productId": 20
+        "productId": 20,
+        "image": "https://farmraiser.com/system/products/1098/image/details_6-Bronze-Mums.jpg",
+        "type": [
+            "outdoor",
+            "indoor"
+        ],
+        "care": "Mums prefer rich, well-drained soil."
     },
     {
         "category": "Herbaceous Perennials",
         "price": 7.99,
         "instructions": "Summer flowering, 12–18” high, likes full sun and well drained soil. Drought tolerant.",
-        "photo": "armeria_allicaea.jpg",
+        "photo": "armeria allicaea",
         "name": "Armeria Alliacea",
         "productId": 21
     },
@@ -209,33 +355,14 @@
         "category": "Herbaceous Perennials",
         "price": 10.99,
         "instructions": "Grown primarily for its attractive silvergray foliage rather than its yellow flowers. Drought tolerant.",
-        "photo": "dusty_miller.jpg",
-        "name": "Senecio Cineraria",
-        "productId": 26
-    },
-    {
-        "category": "Cacti & Succulents",
-        "price": 18.99,
-        "instructions": "Add water until there is half inch of dry soil on the surface. Do not water again until the soil is completely dry.",
-        "photo": "red_cactus.jpg",
-        "name": "Red Cactus",
-        "productId": 27
-    },
-    {
-        "category": "Cacti & Succulents",
-        "price": 30.99,
-        "instructions": "Drought tolerant, well drained soil. Prefers full sun.",
-        "photo": "aloe_vera.jpg",
-        "name": "Aloe Vera",
-        "productId": 28
-    },
-    {
-        "category": "Cacti & Succulents",
-        "price": 20.99,
-        "instructions": "Easy to care for, requiring watering only when they’re dry. They like bright but indirect light.",
-        "photo": "exotic_dancer.jpg",
-        "name": "Schlumbergera",
-        "productId": 29
+        "name": "Dusty miller",
+        "scientific": "Senecio Cineraria",
+        "productId": 26,
+        "image": "http://www.costafarms.com/CostaFarms/Dusty-Miller-costa-Farms.jpg?height=411&width=856&scale=both",
+        "type": [
+            "outdoor",
+            "indoor"
+        ]
     },
     {
         "category": "Cacti & Succulents",
@@ -243,7 +370,12 @@
         "instructions": "Locate it in a place where it is exposed to at least a few hours of direct sunlight.",
         "photo": "string_of_pearls.jpg",
         "name": "Senecio Rowleyanus",
-        "productId": 30
+        "productId": 30,
+        "image": "https://http2.mlstatic.com/planta-rosario-senecio-rowleyanus-bolitas-pelotitas-D_NQ_NP_947102-MLA29600381702_032019-F.jpg",
+        "type": [
+            "outdoor",
+            "indoor"
+        ]
     },
     {
         "category": "Cacti & Succulents",
@@ -251,30 +383,44 @@
         "instructions": "These plants blend in among the stones as a means of protection. Grazing animals would otherwise eat them.",
         "photo": "lithops.jpg",
         "name": "Lithops",
-        "productId": 31
+        "productId": 31,
+        "image": "https://album.mediaset.es/eimg/2018/02/27/d969JGmBoU0qAawxzlEzU.jpg?w=480"
     },
     {
         "category": "Cacti & Succulents",
         "price": 55.99,
         "instructions": "The Mexican Fence Post will eventually reach 20 feet tall. Protect the growing tips with Styrofoam cups on the tops.",
-        "photo": "mexican_fencepost_cactus.jpg",
+        "photo": "mexican fencepost cactus",
         "name": "Pachycereus Marginatus",
-        "productId": 32
+        "productId": 32,
+        "image": "http://www.cacti.co.nz/images/library-p-pachycereus-marginatus-pachycereus-marginatus-13022007-e.jpg",
+        "type": [
+            "indoor"
+        ]
     },
     {
         "category": "Cacti & Succulents",
         "price": 25.99,
         "instructions": "Growing as a large roughly spherical globe, it may eventually reach over a meter in height after many years.",
-        "photo": "mexican_golden_barrel_cactus.jpg",
-        "name": "Echinocactus Grusonii",
-        "productId": 33
+        "name": "mexican golden barrel cactus",
+        "scientific": "Echinocactus Grusonii",
+        "productId": 33,
+        "image": "http://tipsplants.com/sites/default/files/img/articles/big/golden_barrel_cactus_63.jpeg",
+        "type": [
+            "outdoor"
+        ]
     },
     {
         "category": "Cacti & Succulents",
         "price": 16.99,
         "instructions": "The plants should be kept almost completely dry during the winter months, once a month should be fine.",
-        "photo": "opuntia_cactus.jpg",
+        "scientific": "opuntia cactus",
         "name": "Opuntia Falcata",
-        "productId": 34
+        "productId": 34,
+        "image": "https://i.ytimg.com/vi/7TD8k1rY-xY/maxresdefault.jpg",
+        "type": [
+            "outdoor",
+            "indoor"
+        ]
     }
 ]

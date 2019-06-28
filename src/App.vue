@@ -66,7 +66,7 @@ export default {
         { icon: "all_inclusive", title: "All Plants", link: "/allplants" },
         { icon: "local_florist", title: "Categories", link: "/categories" },
         { icon: "spa", title: "Care", link: "/" },
-        { icon: "search", title: "Search", link: "" },
+
         { icon: "chat", title: "Chat", link: "" },
         { icon: "person", title: "Profile", link: "" },
         { icon: "lock_open", title: "Log in", link: "/signin", hola: "try" }
