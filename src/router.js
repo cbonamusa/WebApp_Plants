@@ -8,6 +8,7 @@ import Indoor from "./views/SubViews/Indoor.vue";
 import Outdoor from "./views/SubViews/Outdoor.vue";
 import Eatable from "./views/SubViews/Eatable.vue";
 import Medicinal from "./views/SubViews/Medicinal.vue";
+import Care from "./views/Care.vue";
 
 
 
@@ -18,6 +19,11 @@ export default new Router({
 
 
   routes: [
+    {
+      path: "/care",
+      name: "care",
+      component: Care
+    },
     {
       path: "/medicinal",
       name: "medicinal",
@@ -50,7 +56,7 @@ export default new Router({
 
     },
     {
-      path: "/home",
+      path: "/",
       name: "home",
       component: Home
     },

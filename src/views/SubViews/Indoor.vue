@@ -46,7 +46,7 @@ export default {
   },
   mounted() {
     axios
-      .get("https://api.myjson.com/bins/k5vcf")
+      .get("https://api.myjson.com/bins/kw28v")
       .then(response => (this.myplants = response.data));
   }
 };

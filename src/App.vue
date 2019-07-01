@@ -19,7 +19,7 @@
         <v-icon @click="$router.go(-1)">arrow_back</v-icon>
       </v-btn>
 
-      <v-btn icon>
+      <v-btn icon href="/categories">
         <v-icon>apps</v-icon>
       </v-btn>
 
@@ -62,11 +62,10 @@ export default {
     return {
       SideNav: false,
       menuItems: [
-        { icon: "home", title: "Home", link: "/home" },
+        { icon: "home", title: "Home", link: "/" },
         { icon: "all_inclusive", title: "All Plants", link: "/allplants" },
         { icon: "local_florist", title: "Categories", link: "/categories" },
-        { icon: "spa", title: "Care", link: "/" },
-
+        { icon: "spa", title: "Care", link: "/care" },
         { icon: "chat", title: "Chat", link: "" },
         { icon: "person", title: "Profile", link: "" },
         { icon: "lock_open", title: "Log in", link: "/signin", hola: "try" }
