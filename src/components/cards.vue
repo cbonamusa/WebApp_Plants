@@ -24,11 +24,11 @@
             </v-btn>
 
             <v-btn flat icon small color="info" v-show="plant.category == 'Herbaceous Perennials'">
-              <v-icon>leave</v-icon>
+              <v-img :src="require('../assets/sprout.png')"></v-img>
             </v-btn>
 
             <v-btn flat icon small color="info" v-show="plant.category == 'Cacti & Succulents'">
-              <v-icon>cactus</v-icon>
+              <v-img :src="require('../assets/cactus.png')"></v-img>
             </v-btn>
 
             <v-btn flat icon color="error">
@@ -54,31 +54,24 @@
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
+  props: ["plants"],
+
   data() {
     return {
       show: false,
-      myplants: [],
       search: ""
     };
   },
 
   computed: {
     searched() {
-      return this.myplants.filter(
+      return this.plants.filter(
         plant =>
           plant.name.toLowerCase().includes(this.search.toLowerCase()) ||
           plant.category.toLowerCase().includes(this.search.toLowerCase())
       ); // si quito el .name no me muetra ninguna card
     }
-  },
-
-  mounted() {
-    axios
-      .get("https://api.myjson.com/bins/12guyf")
-      .then(response => (this.myplants = response.data));
   }
 
   // methods: {

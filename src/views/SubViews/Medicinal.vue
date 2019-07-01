@@ -3,9 +3,9 @@
     <v-flex>
       <h1 class="titleMed ml-2 success--text titleMed">Medicinal Propeties</h1>
     </v-flex>
-    <v-flex>
-      <v-img class="fotoMed" :src="require('@/assets/medical2.jpg')"></v-img>
-    </v-flex>
+    <div class="fotoMedDiv">
+      <!-- <v-img class="fotoMed" :src="require('@/assets/medical2.jpg')"></v-img> -->
+    </div>
 
     <v-flex>
       <h3 class="extraMed">
@@ -20,14 +20,48 @@
         have known about:
       </p>
     </v-flex>
+    <cards :plants="medicalplants"></cards>
   </v-container>
 </template>
 
 <script>
-export default {};
+import cards from "../../components/cards.vue";
+import axios from "axios";
+export default {
+  data() {
+    return {
+      myplants: []
+    };
+  },
+  components: {
+    cards
+  },
+  computed: {
+    medicalplants() {
+      return this.myplants.filter(plant => {
+        console.log(plant);
+        return plant.type.includes("medical");
+      });
+    }
+  },
+  mounted() {
+    axios
+      .get("https://api.myjson.com/bins/k5vcf")
+      .then(response => (this.myplants = response.data));
+  }
+};
 </script>
 
 <style>
+.fotoMedDiv {
+  height: 250px;
+  width: 325px;
+  margin-top: 80px;
+  margin-left: 33px;
+  margin-right: 0px;
+  background-image: url(https://images.pexels.com/photos/1480347/pexels-photo-1480347.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: 100%;
+}
 .extraMed {
   font-family: "Nothing You Could Do", cursive;
   font-size: 25px;
@@ -57,6 +91,6 @@ export default {};
   width: 120%;
   margin-top: 65px;
   margin-left: 40px;
-  object-fit: inherit;
+  object-fit: cover;
 }
 </style>

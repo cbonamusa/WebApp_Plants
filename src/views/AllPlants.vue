@@ -12,13 +12,13 @@
         While the majority of these pretty plants fully blossom come spring or summer,
         you can still browse plenty of low-maintenance petals that bloom year round.
       </h5>
-
-      <h1 class="bigtext">Flower & Plants</h1>
+      <v-icon>fab fa-pagelines</v-icon>
+      <h1 class="bigtext">Flower &Plants</h1>
     </div>
 
     <v-container grid-list-md class="pa-0">
       <!-- props generate space between cards -->
-      <cards></cards>
+      <cards :plants="myplants"></cards>
     </v-container>
   </v-container>
 </template>
@@ -26,9 +26,20 @@
 
  <script>
 import cards from "../components/cards.vue";
+import axios from "axios";
 export default {
   components: {
     cards
+  },
+  data() {
+    return {
+      myplants: []
+    };
+  },
+  mounted() {
+    axios
+      .get("https://api.myjson.com/bins/k5vcf")
+      .then(response => (this.myplants = response.data));
   }
 };
 </script>
@@ -40,7 +51,7 @@ export default {
 } */
 .bigtext {
   font-family: "Permanent Marker", cursive !important;
-  font-size: 85px;
+  font-size: 80px;
   line-height: 70px;
 }
 
