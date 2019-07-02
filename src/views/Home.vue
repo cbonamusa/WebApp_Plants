@@ -1,6 +1,6 @@
 <template >
-  <v-container class="parallax pa-0">
-    <v-parallax class="p-a-0" height="200"></v-parallax>
+  <v-container class="parallax">
+    <!-- <v-parallax class="p-a-0" height="200"></v-parallax> -->
 
     <v-flex>
       <h1 class="titleHome pl-2 teal darken-4 white--text font-weight-medium display-3">GARDENING</h1>
@@ -34,6 +34,15 @@ import carrousel from "../components/carrousel";
 export default {
   components: {
     carrousel
+  },
+  created() {
+    // window.addEventListener("scroll", () => {
+    //   document.querySelector(
+    //     ".parallax"
+    //   ).style.backgroundPosition = document.querySelector(
+    //     ".parallax"
+    //   ).scrollTop;
+    // });
   }
 };
 </script>
@@ -59,11 +68,19 @@ export default {
   z-index: 1;
 }
 .parallax {
+  padding: 0px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  position: fixed;
   background-image: url("https://i.pinimg.com/564x/e3/b5/44/e3b54488966e2aed98677a3765aceaba.jpg");
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   height: 100%;
   overflow: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .titleHome {

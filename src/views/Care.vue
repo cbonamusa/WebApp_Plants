@@ -87,7 +87,7 @@ export default {};
   margin-top: 70px;
   height: 200px;
   background-size: 100%;
-  background-image: url("https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("../assets/care.jpeg");
 }
 .large {
   font-size: 30px;

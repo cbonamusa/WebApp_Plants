@@ -59,7 +59,7 @@ export default {
   margin-top: 80px;
   margin-left: 33px;
   margin-right: 0px;
-  background-image: url(https://images.pexels.com/photos/1480347/pexels-photo-1480347.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-image: url("../../assets/medical2.jpg");
   background-size: 100%;
 }
 .extraMed {

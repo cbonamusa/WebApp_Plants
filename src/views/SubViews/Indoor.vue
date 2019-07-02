@@ -56,7 +56,7 @@ export default {
 .fotodiv {
   width: 300px;
   height: 425px;
-  background-image: url("https://images.pexels.com/photos/1657107/pexels-photo-1657107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("../../assets/indoorPlant.jpg");
   background-size: 100%;
   margin-left: 60px;
 }
