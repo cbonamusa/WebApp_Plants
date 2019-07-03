@@ -2,7 +2,7 @@
   <v-flex>
     <v-text-field v-model="search" append-icon="search" label="Search" single-line></v-text-field>
     <v-layout row wrap>
-      <v-flex class="mb-2" v-for="(plant, i) in searched" :key="i" xs12 sm4>
+      <v-flex class="mb-2" v-for="(plant, index) in searched" :key="index" xs12 sm4>
         <!-- in searched, esta es la funcion de filtros -->
         <v-card>
           <v-img height="90px" :src="plant.image" width="100%"></v-img>
@@ -40,13 +40,13 @@
 
             <v-spacer></v-spacer>
 
-            <v-btn icon @click="clicked = !clicked" :i="plant">
-              <v-icon>{{clicked ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}}</v-icon>
+            <v-btn icon @click="showText(index)">
+              <v-icon>{{show != index ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}}</v-icon>
             </v-btn>
           </v-card-actions>
 
           <v-slide-transition>
-            <v-card-text v-if="clicked">{{plant.instructions}}</v-card-text>
+            <v-card-text v-show="show == index">{{plant.instructions}}</v-card-text>
           </v-slide-transition>
         </v-card>
       </v-flex>
@@ -60,7 +60,7 @@ export default {
 
   data() {
     return {
-      clicked: false,
+      show: -1,
       search: ""
     };
   },
@@ -72,29 +72,36 @@ export default {
           plant.name.toLowerCase().includes(this.search.toLowerCase()) ||
           plant.category.toLowerCase().includes(this.search.toLowerCase())
       ); // si quito el .name no me muetra ninguna card
-    },
-    selectedCard() {
-      return (this.show = !this.show);
+    }
+  },
+
+  methods: {
+    showText: function(index) {
+      if (this.show == index) {
+        this.show = -1;
+      } else {
+        this.show = index;
+      }
     }
   }
-
-  // methods: {
-  //   myfetch() {
-  //     fetch("https://api.myjson.com/bins/96svt")
-  //       .then(function(result) {
-  //         return result.json;
-  //       })
-  //       .then(function(data) {
-  //         this.myplants = data;
-  //       })
-  //       .catch(Error);
-  //   }
-  // },
-  // created() {
-  //   this.myfetch();
-  //   console.log(this.myplants);
-  // }
 };
+
+// methods: {
+//   myfetch() {
+//     fetch("https://api.myjson.com/bins/96svt")
+//       .then(function(result) {
+//         return result.json;
+//       })
+//       .then(function(data) {
+//         this.myplants = data;
+//       })
+//       .catch(Error);
+//   }
+// },
+// created() {
+//   this.myfetch();
+//   console.log(this.myplants);
+// }
 </script>
 
 
