@@ -30,7 +30,7 @@
             <h3 class="pl-4">COOK WITH</h3>
           </v-flex>
           <v-flex xs6>
-            <v-btn right color="#cfedce" fab large router to="/medicinal">
+            <v-btn right color="#cfedce" fab large to="/medicinal">
               <v-icon large color="white">local_hospital</v-icon>
             </v-btn>
             <h3 class="pr-4">MEDICINAL</h3>

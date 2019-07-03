@@ -40,13 +40,14 @@
 
             <v-spacer></v-spacer>
 
-            <v-btn icon @click="show = !show">
-              <v-icon>{{show ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}}</v-icon>
+            <v-btn icon @click="clicked = !clicked" :i="plant">
+              <v-icon>{{clicked ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}}</v-icon>
             </v-btn>
           </v-card-actions>
-          <v-slide-y-transition>
-            <v-card-text v-show="show">{{plant.instructions}}</v-card-text>
-          </v-slide-y-transition>
+
+          <v-slide-transition>
+            <v-card-text v-if="clicked">{{plant.instructions}}</v-card-text>
+          </v-slide-transition>
         </v-card>
       </v-flex>
     </v-layout>
@@ -59,7 +60,7 @@ export default {
 
   data() {
     return {
-      show: false,
+      clicked: false,
       search: ""
     };
   },
@@ -71,6 +72,9 @@ export default {
           plant.name.toLowerCase().includes(this.search.toLowerCase()) ||
           plant.category.toLowerCase().includes(this.search.toLowerCase())
       ); // si quito el .name no me muetra ninguna card
+    },
+    selectedCard() {
+      return (this.show = !this.show);
     }
   }
 

@@ -66,6 +66,10 @@ export default new Router({
       component: Signin
 
     },
+    {
+      path: '/*',
+      component: FourOhFour
+    },
 
 
   ],
