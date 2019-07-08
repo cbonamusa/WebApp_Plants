@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home";
 import Categories from "./views/Categories"
-import Signin from "./views/Signin.vue";
+import Login from "./views/Login.vue";
 import AllPlants from "./views/AllPlants.vue";
 import Indoor from "./views/SubViews/Indoor.vue";
 import Outdoor from "./views/SubViews/Outdoor.vue";
@@ -61,9 +61,9 @@ export default new Router({
       component: Home
     },
     {
-      path: "/signin",
-      name: "signin",
-      component: Signin
+      path: "/login",
+      name: "login",
+      component: Login
 
     },
     // {

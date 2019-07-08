@@ -68,7 +68,7 @@ export default {
         { icon: "spa", title: "Care", link: "/care" },
         { icon: "chat", title: "Chat", link: "" },
         { icon: "person", title: "Profile", link: "" },
-        { icon: "lock_open", title: "Log in", link: "/signin", hola: "try" }
+        { icon: "lock_open", title: "Log in", link: "/login", hola: "try" }
       ]
     };
   }
