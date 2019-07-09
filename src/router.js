@@ -9,6 +9,7 @@ import Outdoor from "./views/SubViews/Outdoor.vue";
 import Eatable from "./views/SubViews/Eatable.vue";
 import Medicinal from "./views/SubViews/Medicinal.vue";
 import Care from "./views/Care.vue";
+import Profile from "./views/Profile.vue"
 
 
 
@@ -19,6 +20,11 @@ export default new Router({
 
 
   routes: [
+    {
+      path: "/profile",
+      name: "profile",
+      component: Profile
+    },
     {
       path: "/care",
       name: "care",

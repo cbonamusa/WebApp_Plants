@@ -3,39 +3,64 @@
     <div>
       <h1 class="loginTitle">Log In</h1>
     </div>
+    <v-layout row>
+      <v-flex>
+        <!-- <v-text-field name="name" v-model="name" requiered></v-text-field> -->
+      </v-flex>
+    </v-layout>
 
-    <b-btn>Log in</b-btn>
+    <div id="firebaseui-auth-container"></div>
   </v-container>
 </template>
 
 <script>
-var firebase = require("firebase/app");
-require("firebase/auth");
-require("firebase/firestore");
+import firebaseui from "firebaseui";
+import firebase from "firebase";
 
-var firebaseConfig = {
-  apiKey: "AIzaSyDwfSP_ZPtjcn9SkJDlM3LOvaFJRq1HxDE",
-  authDomain: "plantuari.firebaseapp.com",
-  databaseURL: "https://plantuari.firebaseio.com",
-  projectId: "plantuari",
-  storageBucket: "",
-  messagingSenderId: "766333628570",
-  appId: "1:766333628570:web:0b18f0cca22825f7"
+export default {
+  data() {
+    return {};
+  },
+  methods: {
+    // login() {
+    //     var provider = new firebase.auth.GoogleAuthProvider();
+    //     provider.setCustomParameters({ login_hint: "user@example.com" });
+    //     firebase.auth().signInWithPopup(provider)
+    //   }
+  },
+  mounted() {
+    this.$store.state.ui.start("#firebaseui-auth-container ", {
+      signInSuccessUrl: "/profile",
+      signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID]
+
+      // name = firebase.auth().currentUser.displayName;
+    });
+  }
 };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-export default {};
 </script>
 
 <style>
 .loginTitle {
   font-family: "Permanent Marker", cursive !important;
-  color: rgb(13, 28, 4);
+  color: rgb(59, 152, 5);
+  margin-bottom: 70px;
   font-weight: 100 !important;
-  font-size: 80px;
+  font-size: 70px;
   margin-top: -150px !important;
   margin-left: 50px;
+}
+
+.firebaseui-id-page-callback {
+  margin-top: 20px;
+  height: 500px;
+  background: none !important;
+  background-image: url("../assets/loader_leaf.gif") !important;
+  background-size: 200px !important;
+  background-repeat: no-repeat !important;
+  background-position-x: center !important;
+}
+.firebaseui-busy-indicator {
+  display: none;
 }
 </style>
 

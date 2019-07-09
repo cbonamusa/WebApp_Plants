@@ -49,7 +49,7 @@ export default {
 
 <style>
 .foto {
-  width: 70%;
+  width: 100%;
   margin-left: 90px;
   margin-top: 40px;
   box-shadow: 10px 10px 30px #082b04af;
@@ -76,6 +76,7 @@ export default {
   background-attachment: scroll;
   background-size: cover;
   height: 100%;
+  min-width: 100% !important;
   overflow: scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
