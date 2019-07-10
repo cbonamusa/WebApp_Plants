@@ -27,19 +27,20 @@
  <script>
 import cards from "../components/cards.vue";
 import axios from "axios";
+
 export default {
   components: {
     cards
   },
   data() {
-    return {
-      myplants: []
-    };
+    return {};
   },
-  mounted() {
-    axios
-      .get("https://api.myjson.com/bins/pkm83")
-      .then(response => (this.myplants = response.data.allplants));
+  computed: {
+    //llamamos al axios con computed
+    myplants() {
+      //al ser computed la funcion actua como una variable
+      return this.$store.getters.todasPlantas;
+    }
   }
 };
 </script>

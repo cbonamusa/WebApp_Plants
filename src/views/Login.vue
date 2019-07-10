@@ -3,39 +3,71 @@
     <div>
       <h1 class="loginTitle">Log In</h1>
     </div>
-    <v-layout row>
-      <v-flex>
-        <!-- <v-text-field name="name" v-model="name" requiered></v-text-field> -->
+    <v-card class="cardLog elevation-12">
+      <v-card-text>
+        <v-form>
+          <v-text-field prepend-icon="person" name="login" label="Login" type="text"></v-text-field>
+          <v-text-field
+            prepend-icon="lock"
+            name="password"
+            label="Password"
+            id="password"
+            type="password"
+          ></v-text-field>
+        </v-form>
+      </v-card-text>
+      <v-flex xs9>
+        <v-btn class="botonLog ml-4" block color="primary">Login</v-btn>
       </v-flex>
-    </v-layout>
+      <h6 class="or">or</h6>
+      <v-btn @click="login">LogIn with Google</v-btn>
+    </v-card>
 
-    <div id="firebaseui-auth-container"></div>
+    <!-- <div id="firebaseui-auth-container"></div> -->
   </v-container>
 </template>
 
 <script>
 import firebaseui from "firebaseui";
 import firebase from "firebase";
+import { setTimeout } from "timers";
 
 export default {
   data() {
     return {};
   },
   methods: {
-    // login() {
-    //     var provider = new firebase.auth.GoogleAuthProvider();
-    //     provider.setCustomParameters({ login_hint: "user@example.com" });
-    //     firebase.auth().signInWithPopup(provider)
-    //   }
-  },
-  mounted() {
-    this.$store.state.ui.start("#firebaseui-auth-container ", {
-      signInSuccessUrl: "/profile",
-      signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID]
-
-      // name = firebase.auth().currentUser.displayName;
-    });
+    login() {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      provider.setCustomParameters({ login_hint: "user@example.com" });
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then(user => {
+          //enviamos a store todo el user
+          if (user) {
+            this.$store.commit("setUsers", user);
+          }
+        });
+    }
   }
+  //   mounted() {
+  //     this.$store.state.ui.start("#firebaseui-auth-container ", {
+  //       signInSuccessUrl: "/",
+  //       signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID]
+  //     });
+  //     firebase.auth().onAuthStateChanged(user => {
+  //       if (user) {
+  //         // let name = firebase.auth().currentUser.displayName;
+  //         this.$store.commit("setUsers", user);
+  //       } else {
+  //         console.log("no estoy loggi");
+  //         // No user is signed in.
+  //       }
+  //     });
+  //     setTimeout(this.click, 2000);
+  //   }
+  // };
 };
 </script>
 
@@ -51,16 +83,40 @@ export default {
 }
 
 .firebaseui-id-page-callback {
-  margin-top: 20px;
-  height: 500px;
+  margin-top: 50px;
+  height: 450px;
   background: none !important;
   background-image: url("../assets/loader_leaf.gif") !important;
+
   background-size: 200px !important;
   background-repeat: no-repeat !important;
   background-position-x: center !important;
 }
 .firebaseui-busy-indicator {
   display: none;
+}
+
+.cardLog {
+  width: 300px;
+  height: 300px;
+  margin-left: 35px;
+  border-radius: 10px;
+  background-color: rgba(234, 250, 241, 0.536) !important;
+}
+.botonLog {
+  position: relative;
+  align-self: center;
+  align-items: center;
+  margin-left: 40px !important;
+  width: 220px !important;
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.or {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px;
 }
 </style>
 

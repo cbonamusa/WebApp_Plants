@@ -1,9 +1,24 @@
 <template>
-  <h1>MI PERFIL</h1>
+  <v-container>
+    <h1>TESTING PROFILE</h1>
+    <h2>{{$store.state.user}}</h2>
+    <v-btn @click="holaMaricarmen"></v-btn>
+  </v-container>
 </template>
 
 <script>
-export default {};
+import firebase from "firebase";
+export default {
+  mounted() {
+    console.log(firebase.auth().currentUser); //ESTE SALE EN BASE PROFILE
+    this.$store.dispatch("getData");
+  },
+  methods: {
+    holaMaricarmen() {
+      console.log(firebase.auth().currentUser); //ESTE SALE EN BASE STORE
+    }
+  }
+};
 </script>
 
 <style>

@@ -10,6 +10,19 @@
           </v-list-tile-action>
           <v-list-tile-content>{{item.title}}</v-list-tile-content>
         </v-list-tile>
+
+        <v-list-tile
+          v-if="$store.state.user"
+          v-for="item in loggedItems"
+          :key="item.title"
+          router
+          :to="item.link"
+        >
+          <v-list-tile-action>
+            <v-icon>{{item.icon}}</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>{{item.title}}</v-list-tile-content>
+        </v-list-tile>
       </v-list>
     </v-navigation-drawer>
 
@@ -66,9 +79,15 @@ export default {
         { icon: "all_inclusive", title: "All Plants", link: "/allplants" },
         { icon: "local_florist", title: "Categories", link: "/categories" },
         { icon: "spa", title: "Care", link: "/care" },
+        {
+          icon: "lock_open",
+          title: "Log in",
+          link: "/login"
+        }
+      ],
+      loggedItems: [
         { icon: "chat", title: "Chat", link: "" },
-        { icon: "person", title: "Profile", link: "" },
-        { icon: "lock_open", title: "Log in", link: "/login", hola: "try" }
+        { icon: "person", title: "Profile", link: "" }
       ]
     };
   }
