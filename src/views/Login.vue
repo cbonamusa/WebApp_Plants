@@ -3,6 +3,7 @@
     <div>
       <h1 class="loginTitle">Log In</h1>
     </div>
+
     <v-card sx12 class="cardLog elevation-12">
       <v-card-text>
         <v-form>
@@ -46,7 +47,7 @@ export default {
       console.log("entra la funcion Login provider");
       firebase
         .auth()
-        .signInWithRedirect(provider)
+        .signInWithPopup(provider)
         .then(user => {
           console.log("entree");
           //enviamos a store todo el user

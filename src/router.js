@@ -10,6 +10,7 @@ import Eatable from "./views/SubViews/Eatable.vue";
 import Medicinal from "./views/SubViews/Medicinal.vue";
 import Care from "./views/Care.vue";
 import Profile from "./views/Profile.vue"
+import Chat from "./views/Chat.vue"
 
 
 
@@ -20,6 +21,11 @@ export default new Router({
 
 
   routes: [
+    {
+      path: "/chat",
+      name: "chat",
+      component: Chat
+    },
     {
       path: "/profile",
       name: "profile",

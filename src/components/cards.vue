@@ -35,8 +35,18 @@
               <v-icon>room</v-icon>
             </v-btn>
 
-            <v-btn flat icon color="primary">
+            <v-flex v-if="$store.state.user == null" color="gray">
               <v-icon>favorite</v-icon>
+            </v-flex>
+            <v-btn
+              flat
+              icon
+              color="primary"
+              v-if="$store.state.user "
+              active-class="default-class"
+              @click="corazon(plant)"
+            >
+              <v-icon>{{plant.fav != true ? 'favorite_border' : 'favorite'}}</v-icon>
             </v-btn>
 
             <v-spacer></v-spacer>
@@ -62,7 +72,8 @@ export default {
   data() {
     return {
       show: -1,
-      search: ""
+      search: "",
+      on: -1
     };
   },
 
@@ -83,6 +94,15 @@ export default {
       } else {
         this.show = index;
       }
+    },
+    corazon: function(card) {
+      if (!card.fav) {
+        //creamos una propiedad "fav"  que se modifica a true or false en onclic
+        card.fav = true;
+      } else {
+        card.fav = false;
+      }
+      this.$forceUpdate(); //hace que se recarge la para modificar automaticamente la prop
     }
   }
 };

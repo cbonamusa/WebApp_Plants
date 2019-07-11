@@ -65,9 +65,12 @@
         <v-icon>apps</v-icon>
       </v-btn>
 
-      <v-btn icon>
+      <v-btn v-if="$store.state.user" icon>
         <v-icon>favorite</v-icon>
       </v-btn>
+      <v-flex v-if="$store.state.user == null" icon>
+        <v-icon>favorite_border</v-icon>
+      </v-flex>
 
       <!-- Titulo visible en BIG -->
       <v-toolbar-title class="headline hidden-xs-only">
@@ -77,9 +80,55 @@
 
       <v-spacer></v-spacer>
 
-      <!-- Icons y links visibles en BIG -->
-      <v-toolbar-items class="hidden-sm-and-down" v-for="item in menuItems" :key="item.tittle">
-        <v-btn flat class="px-0" router :to="item.link">
+      <!-- Icons y links visibles en BIG /FULL SCREEN -->
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn
+          v-for="item in menuItems"
+          :key="item.tittle"
+          flat
+          class="px-0"
+          router
+          :to="item.link"
+        >
+          <v-icon small>{{item.icon}}</v-icon>
+          <span class="pl-1">{{item.title}}</span>
+        </v-btn>
+
+        <v-btn
+          v-for="item in notlogged"
+          v-if="$store.state.user == null"
+          :key="item.tittle"
+          flat
+          class="px-0"
+          router
+          :to="item.link"
+        >
+          <v-icon small>{{item.icon}}</v-icon>
+          <span class="pl-1">{{item.title}}</span>
+        </v-btn>
+
+        <v-btn
+          v-for="item in loggedItems"
+          v-if="$store.state.user"
+          :key="item.tittle"
+          flat
+          class="px-0"
+          router
+          :to="item.link"
+        >
+          <v-icon small>{{item.icon}}</v-icon>
+          <span class="pl-1">{{item.title}}</span>
+        </v-btn>
+
+        <v-btn
+          v-for="item in logOut"
+          v-if="$store.state.user"
+          :key="item.tittle"
+          flat
+          class="px-0"
+          router
+          :to="item.link"
+        >
           <v-icon small>{{item.icon}}</v-icon>
           <span class="pl-1">{{item.title}}</span>
         </v-btn>
@@ -132,8 +181,8 @@ export default {
       ],
 
       loggedItems: [
-        { icon: "chat", title: "Chat", link: "", click: "" },
-        { icon: "person", title: "Profile", link: "", click: "" }
+        { icon: "chat", title: "Chat", link: "/chat", click: "" },
+        { icon: "person", title: "Profile", link: "/profile", click: "" }
       ],
       logOut: [
         {
@@ -151,6 +200,7 @@ export default {
         .auth()
         .signOut()
         .then(() => {
+          //! Importante! use arrow function para que funcione el then
           console.log("loooogout");
           this.$store.state.user = null;
         })

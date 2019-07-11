@@ -16,7 +16,7 @@
       <h1 class="bigtext">Flower &Plants</h1>
     </div>
 
-    <v-container grid-list-md class="pa-0">
+    <v-container grid-list-md class="pa-0" v-if="myplants.length != 0">
       <!-- props generate space between cards -->
       <cards :plants="myplants"></cards>
     </v-container>

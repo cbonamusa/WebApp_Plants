@@ -28,6 +28,17 @@ new Vue({
     //call firebaseUi from store
     // this.$store.dispatch("createUI")
 
+    firebase.auth().onAuthStateChanged(user => { //hacemos esto para que al recargar no se desconecte el user
+      if (user) {
+        console.log("Hay usuario");
+        this.$store.commit("setUsers", firebase.auth().currentUser);
+      } else {
+        console.log("No user")
+        this.$store.commit("setUsers", null);
+
+      }
+    })
+
 
   },
 
