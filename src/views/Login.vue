@@ -46,7 +46,7 @@ export default {
       console.log("entra la funcion Login provider");
       firebase
         .auth()
-        .signInWithPopup(provider)
+        .signInWithRedirect(provider)
         .then(user => {
           console.log("entree");
           //enviamos a store todo el user
