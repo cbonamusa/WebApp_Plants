@@ -34,6 +34,7 @@
             <v-btn flat icon color="error">
               <v-icon>room</v-icon>
             </v-btn>
+
             <v-btn flat icon color="primary">
               <v-icon>favorite</v-icon>
             </v-btn>

@@ -12,7 +12,7 @@ export default new Vuex.Store({
     user: null, //null mejor que "" 
     logeado: "", //mandar algo si/no para hacer v-if que esconda login i aparezca singup
     plants: "",
-    showbox: true
+
   },
   mutations: {
     setUsers(state, value) {

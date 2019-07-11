@@ -14,9 +14,9 @@
       </p>
     </v-flex>
     <h2 class="extratextHome">Get us arround!</h2>
-    <v-flex class="foto" align-end>
+    <div class="foto" align-end>
       <v-img :src="require('@/assets/01_interior.jpg')"></v-img>
-    </v-flex>
+    </div>
 
     <v-flex>
       <p class="basictextHome pa-3">
@@ -49,7 +49,7 @@ export default {
 
 <style>
 .foto {
-  width: 100%;
+  width: 280px;
   margin-left: 90px;
   margin-top: 40px;
   box-shadow: 10px 10px 30px #082b04af;

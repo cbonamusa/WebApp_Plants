@@ -22,10 +22,12 @@ new Vue({
     };
 
     // Initialize Firebase
+
     firebase.initializeApp(firebaseConfig);
+    this.$store.dispatch("getJson");
     //call firebaseUi from store
     // this.$store.dispatch("createUI")
-    this.$store.dispatch("getJson")
+
 
   },
 
